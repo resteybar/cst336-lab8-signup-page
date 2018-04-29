@@ -1,0 +1,45 @@
+body {
+    font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+    background-color: black;
+    color: white;
+}
+
+h1 {
+    color: #d80000;
+    text-align: center;
+}
+
+#write {
+    width: 6%;
+    height: 6%;
+}
+
+#signUpForm {
+    color: #7EC0EE;
+    width: 12%;
+    height: 12%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+legend {
+    color: #88e188;
+}
+
+#submitBtn {
+    background-color: #cc8400;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#isCorrect {
+    text-align: center;
+}
