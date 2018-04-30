@@ -68,7 +68,6 @@
                         dataType: "json",
                         data: { "state": $("#state").val()},
                         success: function(data,status) {
-                            alert(data[0].county);
                             $("#county").html("<option> - Select One - </option>");
                             for(var i = 0; i < data.length; i++){
                                  $("#county").append("<option>" + data[i].county + "</option>");
@@ -91,10 +90,13 @@
                         dataType: "json",
                         data: { "zip": $("#zipCode").val() },
                         success: function(data,status) {
-                            if(data)
+                            if(data) {
                                 $("#city").html(data.city);
-                            else
+                                $("#latitude").html(data.latitude);
+                                $("#longitude").html(data.longitude);
+                            } else {
                                 $("#city").html("<br/>City not found.<br/>");
+                            }
                         },
                         complete: function(data,status) { //optional, used for debugging purposes
                             //alert(status);
@@ -165,9 +167,9 @@
                 Zip Code:    <input type="text" id="zipCode"><br><br />
                 City:        <span id="city"></span>
                 <br>
-                Latitude: 
+                Latitude:    <span id="latitude"></span>
                 <br>
-                Longitude:
+                Longitude:   <span id="longitude"></span>
                 <br><br>
                 State: 
                 <select id="state">
