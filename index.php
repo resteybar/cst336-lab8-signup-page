@@ -114,7 +114,7 @@
                 });
                 
                 $("#submitBtn").click(function() {
-                   if ($("#username").val() != "" && $("#password").val() == $("#retypePass").val()) {
+                   if ($("#username").val() != "" && $("#password").val() != "" && $("#password").val() == $("#retypePass").val()) {
                         $("#isCorrect").show();
                         $("#isCorrect").css("color","green");
                         $("#isCorrect").css("font-size","30px");
